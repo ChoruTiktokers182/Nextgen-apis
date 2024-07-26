@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use('/', createProxyMiddleware({ target: '158.101.198.227:8643', changeOrigin: true }));
+app.use('/', createProxyMiddleware({ target: 'http://158.101.198.227:8643/', changeOrigin: true }));
 
 const server = http.createServer(app);
 server.listen(port, () => {
